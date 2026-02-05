@@ -40,6 +40,7 @@ export const TEXTS = {
     desc: "Have questions, suggestions, or need to report an issue? Reach out to us.",
     emailLabel: "Email us at:",
     email: "support@ttdownloader.com",
+    cta: "Send us an email",
     backBtn: "Back to Home",
   }
 };

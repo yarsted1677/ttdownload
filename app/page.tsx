@@ -3,6 +3,7 @@
 import { useState } from "react";
 import URLInput from "@/components/URLInput";
 import VideoResult from "@/components/VideoResult";
+import FeatureCards from "@/components/FeatureCards";
 import { VideoData } from "@/types";
 import {TEXTS} from "@/locales/en";
 import { useDownload } from "@/context/DownloadContext";
@@ -39,14 +40,18 @@ export default function Home() {
 
       {/* Tekst SEO (ukrywamy gdy jest wynik, żeby nie rozpraszać) */}
       {!result && (
-        <div className="mt-20 max-w-3xl text-gray-500 space-y-6 text-sm">
-          <h2 className="text-2xl font-bold text-gray-800">{TEXTS.seo.title}</h2>
-          <ol className="list-decimal pl-5 space-y-2">
-            <li>{TEXTS.seo.step1}</li>
-            <li>{TEXTS.seo.step2}</li>
-            <li>{TEXTS.seo.step3}</li>
-          </ol>
-        </div>
+        <>
+          <div className="mt-20 max-w-3xl text-gray-500 space-y-6 text-sm">
+            <h2 className="text-2xl font-bold text-gray-800">{TEXTS.seo.title}</h2>
+            <ol className="list-decimal pl-5 space-y-2">
+              <li>{TEXTS.seo.step1}</li>
+              <li>{TEXTS.seo.step2}</li>
+              <li>{TEXTS.seo.step3}</li>
+            </ol>
+          </div>
+
+          <FeatureCards />
+        </>
       )}
 
     </div>
