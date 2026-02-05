@@ -1,5 +1,6 @@
 import { VideoData } from "@/types";
 import { Download, CheckCircle, ArrowLeft } from "lucide-react";
+import {TEXTS} from "@/locales/en";
 
 interface Props {
   data: VideoData;
@@ -16,10 +17,10 @@ export default function VideoResult({ data, onReset }: Props) {
           onClick={onReset}
           className="text-gray-500 hover:text-blue-600 flex items-center gap-2 text-sm font-medium transition-colors"
         >
-          <ArrowLeft size={16} /> Pobierz inny plik
+          <ArrowLeft size={16} /> {TEXTS.result.anotherBtn}
         </button>
         <span className="text-green-600 flex items-center gap-1 text-sm font-bold">
-          <CheckCircle size={16} /> Sukces
+          <CheckCircle size={16} /> {TEXTS.result.success}
         </span>
       </div>
 
@@ -40,21 +41,20 @@ export default function VideoResult({ data, onReset }: Props) {
             <h3 className="text-lg font-semibold text-gray-800 line-clamp-3 mb-2">
               {data.text || "Bez opisu"}
             </h3>
-            <p className="text-sm text-gray-500">Jakość: HD (No Watermark)</p>
           </div>
 
           <div className="mt-6 space-y-3">
             <a 
               href={data.downloadUrl} 
-              target="_blank" // Otwiera w nowym oknie (wymusza pobieranie przez przeglądarkę)
+              target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3 px-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-md transition-all flex items-center justify-center gap-2 text-lg"
             >
-              <Download size={20} /> POBIERZ MP4
+              <Download size={20} /> {TEXTS.result.downloadBtn}
             </a>
             
             <p className="text-xs text-center text-gray-400">
-              Jeśli pobieranie nie ruszy, kliknij prawym i wybierz "Zapisz link jako..."
+              {TEXTS.result.note}
             </p>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { use, useState } from "react";
 import { Loader2, Search } from "lucide-react";
 import { VideoData, ApiResponse } from "@/types";
+import {TEXTS} from "@/locales/en";
 
 interface Props {
     onSuccess: (data: VideoData) => void;
@@ -50,11 +51,11 @@ export default function URLInput({ onSuccess }: Props) {
                         type="text"
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
-                        placeholder="Wklej link z TikToka tutaj..."
-                        className="w-full p-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-lg transition-all"
+                        placeholder={TEXTS.input.placeholder}
+                        className="w-full p-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-lg text-gray-700 transition-all"
                         disabled={isLoading}
                     />
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-900" />
                 </div>
 
                 {error && (
@@ -70,10 +71,10 @@ export default function URLInput({ onSuccess }: Props) {
                 >
                     {isLoading ? (
                         <>
-                            <Loader2 className="animate-spin" /> Przetwarzanie...
+                            <Loader2 className="animate-spin" /> {TEXTS.input.buttonLoading}
                         </>
                     ) : (
-                        "Pobierz Wideo"
+                        TEXTS.input.buttonDefault
                     )}
                 </button>
             </form>

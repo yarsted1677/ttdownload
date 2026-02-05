@@ -1,4 +1,7 @@
 export const TEXTS = {
+  navbar: {
+    brand: "TTDownloader",
+  },
   hero: {
     title: "TikTok Downloader",
     subtitle: "Download TikTok videos without watermark. Fast, free, and unlimited.",
