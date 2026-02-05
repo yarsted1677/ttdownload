@@ -10,16 +10,10 @@ export const metadata = {
 export default function ContactPage() {
     return (
         <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-
-
             <div className="w-full max-w-lg bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 text-center space-y-8 animate-in fade-in zoom-in duration-500">
-
-
                 <div className="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Mail size={40} />
                 </div>
-
-
                 <div className="space-y-3">
                     <h1 className="text-3xl font-extrabold text-gray-800">
                         {TEXTS.contactPage.title}
@@ -28,8 +22,6 @@ export default function ContactPage() {
                         {TEXTS.contactPage.desc}
                     </p>
                 </div>
-
-                {/* Sekcja z Mailem (Klikalna) */}
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group">
                     <p className="text-xs uppercase tracking-widest text-gray-400 font-bold mb-2">
                         {TEXTS.contactPage.emailLabel}
@@ -42,8 +34,6 @@ export default function ContactPage() {
                         <ExternalLink size={18} className="opacity-50 group-hover:opacity-100" />
                     </a>
                 </div>
-
-                {/* Przycisk Powrotu */}
                 <div className="pt-4">
                     <Link
                         href="/"
