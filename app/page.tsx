@@ -5,9 +5,10 @@ import URLInput from "@/components/URLInput";
 import VideoResult from "@/components/VideoResult";
 import { VideoData } from "@/types";
 import {TEXTS} from "@/locales/en";
+import { useDownload } from "@/context/DownloadContext";
 
 export default function Home() {
-  const [result, setResult] = useState<VideoData | null>(null);
+  const { result, setResult, reset } = useDownload();
 
   return (
     <div className="flex flex-col items-center justify-center space-y-8 mt-10">
@@ -29,7 +30,7 @@ export default function Home() {
         {result ? (
           <VideoResult 
             data={result} 
-            onReset={() => setResult(null)} 
+            onReset={reset}
           />
         ) : (
           <URLInput onSuccess={(data) => setResult(data)} />

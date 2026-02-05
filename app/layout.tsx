@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { DownloadProvider } from "@/context/DownloadContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,16 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 text-gray-900 flex flex-col min-h-screen`}>
-        {/* Navbar zawsze na górze */}
-        <Navbar />
-        
-        {/* Główna treść strony (page.tsx wchodzi tutaj) */}
-        <main className="grow container mx-auto px-4 py-8">
+        <DownloadProvider>
+          {/* Navbar zawsze na górze */}
+          <Navbar />
+          
+          {/* Główna treść strony (page.tsx wchodzi tutaj) */}
+          <main className="grow container mx-auto px-4 py-8">
           {children}
         </main>
 
         {/* Stopka zawsze na dole */}
         <Footer />
+        </DownloadProvider>
       </body>
     </html>
   );
