@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   // 1. Tytuł: To widzi użytkownik w Google (Niebieski link)
   // Wzór: Główna Fraza + Cecha + Call to Action
   title: {
-    default: "TikTok Downloader - Download Video Without Watermark (Fast & HD)",
+    default: "TikTok Downloader - Download Video Without Watermark",
     template: "%s | TTDownloader", // Szablon dla podstron (np. Contact | TTDownloader)
   },
 

@@ -13,12 +13,11 @@ export default function Home() {
   const { result, setResult, reset } = useDownload();
 
   return (
-    <div className="flex flex-col w-full">
+    <main className="flex flex-col w-full">
       
-      {/* SECTION 1: HERO & INPUT (White) */}
-      <section className="w-full bg-white py-12 md:py-20">
-        <div className="container mx-auto px-4 flex flex-col items-center space-y-8">
-          {/* Nagłówek (zawsze widoczny, chyba że chcesz go ukryć po wyniku) */}
+      {/* SECTION 1: HERO & INPUT */}
+      <section id="hero" className="w-full bg-white py-12 md:py-20" aria-label="Hero section with URL input">
+        <article className="container mx-auto px-4 flex flex-col items-center space-y-8">
           {!result && (
             <div className="text-center space-y-4 max-w-2xl animate-in fade-in zoom-in duration-500">
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-blue-600">
@@ -30,7 +29,6 @@ export default function Home() {
             </div>
           )}
 
-          {/* Logika przełączania widoków */}
           <div className="w-full flex justify-center min-h-[300px]">
             {result ? (
               <VideoResult 
@@ -41,14 +39,14 @@ export default function Home() {
               <URLInput onSuccess={(data) => setResult(data)} />
             )}
           </div>
-        </div>
+        </article>
       </section>
 
-      {/* SECTION 2: SEO/STEPS (Gray) */}
+      {/* SECTION 2: HOW IT WORKS */}
       {!result && (
         <>
-          <section className="w-full bg-gray-50 py-12 md:py-20">
-            <div className="container mx-auto px-4 flex justify-center">
+          <section id="how-it-works" className="w-full bg-gray-50 py-12 md:py-20" aria-label="How to use the downloader">
+            <article className="container mx-auto px-4 flex justify-center">
               <div className="max-w-3xl text-gray-500 space-y-6 text-sm">
                 <h2 className="text-2xl font-bold text-gray-800">{TEXTS.seo.title}</h2>
                 <ol className="list-decimal pl-5 space-y-2">
@@ -57,21 +55,25 @@ export default function Home() {
                   <li>{TEXTS.seo.step3}</li>
                 </ol>
               </div>
-            </div>
+            </article>
           </section>
 
-          {/* SECTION 3: FEATURES (White) */}
-          <section className="w-full bg-white py-12 md:py-20">
-            <FeatureCards />
+          {/* SECTION 3: FEATURES */}
+          <section id="features" className="w-full bg-white py-12 md:py-20" aria-label="Key features">
+            <article className="container mx-auto px-4">
+              <FeatureCards />
+            </article>
           </section>
 
-          {/* SECTION 4: FAQ (Gray) */}
-          <section className="w-full bg-gray-50 py-12 md:py-20">
-            <FAQ />
+          {/* SECTION 4: FAQ */}
+          <section id="faq" className="w-full bg-gray-50 py-12 md:py-20" aria-label="Frequently asked questions">
+            <article className="container mx-auto px-4">
+              <FAQ />
+            </article>
           </section>
         </>
       )}
 
-    </div>
+    </main>
   );
 }
