@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://tt-downloader.vercel.app'; // Ten sam URL co wyżej
+  const baseUrl = 'https://ttdownload-six.vercel.app/'; // Ten sam URL co wyżej
 
   return {
     rules: {
