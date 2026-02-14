@@ -26,6 +26,9 @@ export default function Home() {
               <p className="text-lg text-gray-600">
                 {TEXTS.hero.subtitle}
               </p>
+              <p className="text-sm text-gray-500">
+                Built for creators: save your own TikTok videos for editing, archiving, and offline use.
+              </p>
             </div>
           )}
 
@@ -54,6 +57,39 @@ export default function Home() {
                   <li>{TEXTS.seo.step2}</li>
                   <li>{TEXTS.seo.step3}</li>
                 </ol>
+              </div>
+            </article>
+          </section>
+
+          {/* SECTION 2.5: WHY USE */}
+          <section id="why-use" className="w-full bg-white py-12 md:py-20" aria-label="Why use TTDownloader">
+            <article className="container mx-auto px-4 flex justify-center">
+              <div className="max-w-3xl space-y-6 text-gray-700">
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Why use a TikTok downloader?
+                </h2>
+
+                <p>
+                  TTDownloader is built for creators who want to save their own TikTok videos for editing,
+                  archiving, or offline viewing — without installing apps or dealing with popups.
+                </p>
+
+                <p>
+                  Many “downloaders” are slow, overloaded with ads, or break on mobile. Here the flow is simple:
+                  paste a link, generate the file, and save it. If you’re working on short-form content,
+                  this saves time when you need a clean file for your next edit.
+                </p>
+
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Quick exports for editing workflows (CapCut, Premiere, mobile editors).</li>
+                  <li>Archiving your own posts in case you lose access to the original upload.</li>
+                  <li>Offline viewing when you’re traveling or have limited connectivity.</li>
+                </ul>
+
+                <p className="text-sm text-gray-500">
+                  Please use this tool responsibly and respect creators’ rights — only download content you own
+                  or have permission to use.
+                </p>
               </div>
             </article>
           </section>

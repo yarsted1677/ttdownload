@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 
   // 2. Opis: To szary tekst pod linkiem. Musi zawierać słowa z Tier 2.
-  description: "The best TikTok Downloader to save videos without watermark. Fast, free, and unlimited. Download TT videos in HD MP4 format. Works on mobile & PC.",
+  description: "TikTok Downloader built for creators: save your own videos for editing, archiving, or offline viewing. Fast, free, and unlimited. Download in HD MP4 format on mobile and PC.",
 
   // 3. Słowa kluczowe (Dla Bing, Yahoo i kontekstu AI)
   keywords: [
