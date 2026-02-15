@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
-  const baseUrl = 'https://ttdownload-six.vercel.app/'; 
+  const baseUrl = 'https://ttdownload-six.vercel.app'; 
 
   return [
     {
