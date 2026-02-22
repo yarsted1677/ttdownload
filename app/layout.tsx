@@ -22,14 +22,14 @@ export const metadata: Metadata = {
 
   // 3. Słowa kluczowe (Dla Bing, Yahoo i kontekstu AI)
   keywords: [
-    "tiktok downloader", 
-    "tiktok no watermark", 
-    "tt downloader", 
-    "save tiktok video", 
-    "tiktok to mp4", 
-    "tiktok saver", 
-    "download tiktok mp3", 
-    "snaptik alternative", 
+    "tiktok downloader",
+    "tiktok no watermark",
+    "tt downloader",
+    "save tiktok video",
+    "tiktok to mp4",
+    "tiktok saver",
+    "download tiktok mp3",
+    "snaptik alternative",
     "ssstik alternative"
   ],
   // 4. Autorzy i Twórca
@@ -68,14 +68,14 @@ export default function RootLayout({
         <DownloadProvider>
           {/* Navbar zawsze na górze */}
           <Navbar />
-          
+
           {/* Główna treść strony (page.tsx wchodzi tutaj) */}
           <main className="grow w-full">
-          {children}
-        </main>
+            {children}
+          </main>
 
-        {/* Stopka zawsze na dole */}
-        <Footer />
+          {/* Stopka zawsze na dole */}
+          <Footer />
         </DownloadProvider>
         <Analytics />
       </body>
