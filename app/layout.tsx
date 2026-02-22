@@ -54,6 +54,19 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
   },
+
+  openGraph: {
+    title: "TikTok Downloader - Download Video Without Watermark",
+    description: "Download TikTok videos without watermark in HD MP4. Free, fast & unlimited.",
+    url: "https://ttdownload-six.vercel.app",
+    siteName: "TTDownloader",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TikTok Downloader - Download Video Without Watermark",
+    description: "Download TikTok videos without watermark in HD MP4. Free, fast & unlimited.",
+  },
 };
 
 
@@ -70,9 +83,9 @@ export default function RootLayout({
           <Navbar />
 
           {/* Główna treść strony (page.tsx wchodzi tutaj) */}
-          <main className="grow w-full">
+          <div className="grow w-full">
             {children}
-          </main>
+          </div>
 
           {/* Stopka zawsze na dole */}
           <Footer />

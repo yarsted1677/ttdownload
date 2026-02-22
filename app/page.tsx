@@ -12,12 +12,20 @@ export default function Home() {
       {/* SECTION 1: HERO & INPUT */}
       <section id="hero" className="w-full bg-white py-12 md:py-20" aria-label="Hero section with URL input">
         <article className="container mx-auto px-4 flex flex-col items-center space-y-8">
+          <div className="text-center space-y-4 max-w-2xl">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-blue-600">
+              {TEXTS.hero.title}
+            </h1>
+            <p className="text-lg text-gray-600">{TEXTS.hero.subtitle}</p>
+            <p className="text-sm text-gray-500">
+              Built for creators: save your own TikTok videos for editing, archiving, and offline use.
+            </p>
+          </div>
           <HeroSection />
         </article>
       </section>
 
       {/* SECTION 2: HOW IT WORKS */}
-        <>
           <section id="how-it-works" className="w-full bg-gray-50 py-12 md:py-20" aria-label="How to use the downloader">
             <article className="container mx-auto px-4 flex justify-center">
               <div className="max-w-3xl text-gray-500 space-y-6 text-sm">
@@ -77,8 +85,6 @@ export default function Home() {
               <FAQ />
             </article>
           </section>
-        </>
-
     </main>
   );
 }
